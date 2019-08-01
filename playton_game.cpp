@@ -1,8 +1,8 @@
-#include "playton_game.h"
+#include "playtonGame.h"
 #include "physics.h"
 
 
-playton_game::playton_game()
+playtonGame::playtonGame()
 {
     this->rolling = false;
     this->dragging = false;
@@ -14,19 +14,19 @@ playton_game::playton_game()
     this->actualPlay = 1;
 }
 
-playton_game::~playton_game()
+playtonGame::~playtonGame()
 {
 
 }
 
-void playton_game::initGame()
+void playtonGame::initGame()
 {
     driver  = device->getVideoDriver();
     smgr    = device->getSceneManager();
     guienv  = device->getGUIEnvironment();
     collMgr = smgr->getSceneCollisionManager();
 
-    pt_Physics  = new playton_physics(device);
+    pt_Physics  = new playtonPhysics(device);
     pt_Util     = new playton_utility();
 
     createPositions();
@@ -51,7 +51,7 @@ void playton_game::initGame()
     orthogonalCamera->setProjectionMatrix( prjMat,true );
 }
 
-void playton_game::createScene()
+void playtonGame::createScene()
 {
     ILightSceneNode* light = smgr->addLightSceneNode(0);
     light->setPosition(vector3df(0,8,-50));
@@ -211,12 +211,12 @@ void playton_game::createScene()
     HUDtournamentText->setTextAlignment( EGUIA_CENTER,EGUIA_CENTER );
 }
 
-void playton_game::newGame()
+void playtonGame::newGame()
 {
     actualPlay = 1;
 }
 
-void playton_game::resetEverything()
+void playtonGame::resetEverything()
 {
     active          = 0;
     operatorActive  = 0;
@@ -274,7 +274,7 @@ void playton_game::resetEverything()
     pt_Menu->reset();
 }
 
-void playton_game::update( u32 DeltaTime )
+void playtonGame::update( u32 DeltaTime )
 {
     getValuesFromDices();
     pt_Physics->UpdatePhysics( DeltaTime );

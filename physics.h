@@ -11,7 +11,7 @@ using namespace video;
 using namespace io;
 using namespace gui;
 
-class playton_physics
+class playtonPhysics
 {
 
 public:
@@ -21,8 +21,8 @@ public:
     IGUIEnvironment* guienv;
     irr::video::IVideoDriver* driver;
 
-    playton_physics(IrrlichtDevice* device);
-    virtual ~playton_physics();
+    playtonPhysics(IrrlichtDevice* device);
+    virtual ~playtonPhysics();
 
     list<btRigidBody *> Objects;
     list<btRigidBody *> dice;

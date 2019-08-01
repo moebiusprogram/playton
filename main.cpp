@@ -1,7 +1,7 @@
 #include "common.h"
 #include "mbSound.h"
-#include "playton_game.h"
-#include "playton_menu.h"
+#include "playtonGame.h"
+#include "playtonMenu.h"
 
 
 IrrlichtDevice *device;
@@ -10,8 +10,8 @@ ISceneManager* smgr;
 IGUIEnvironment* guienv;
 IVideoDriver* driver;
 
-playton_game* pt_Game;
-playton_menu* pt_Menu;
+playtonGame* pt_Game;
+playtonMenu* pt_Menu;
 
 playton_translation* pt_Translation;
 
@@ -256,8 +256,8 @@ int main(int argc, char** argv)
 
     device->getSceneManager()->setAmbientLight( SColorf(255,255,255,255) );
     pt_Sound        = new mbSound();
-    pt_Game         = new playton_game();
-    pt_Menu         = new playton_menu();
+    pt_Game         = new playtonGame();
+    pt_Menu         = new playtonMenu();
     pt_Translation  = new playton_translation();
 
     pt_Game->setMenuHandler( pt_Menu );
