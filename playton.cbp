@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="playton" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/playton" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Debug/" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_IRR_STATIC_LIB_" />
+					<Add directory="include" />
+					<Add directory="../playton" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/playton" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="/home/joel/Documentos/libraries/irrlicht-1.8.4/bin/" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../playton" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add directory="../../libraries/freetype-2.4.0/include" />
+			<Add directory="/home/joel/Documentos/libraries/irrlicht-1.8.4/include" />
+			<Add directory="irrKlang-64bit-1.5.0/include" />
+			<Add directory="../../libraries/bullet3-2.85.1/src" />
+		</Compiler>
+		<Linker>
+			<Add library="../../libraries/freetype-2.4.0/lib/libfreetype.a" />
+			<Add library="sound/libIrrKlang.so" />
+			<Add library="../../libraries/irrlicht-1.8.4/lib/Linux/libIrrlicht.a" />
+			<Add library="GL" />
+			<Add library="GLU" />
+			<Add library="Xxf86vm" />
+			<Add library="X11" />
+			<Add library="../../libraries/bullet3-2.85.1/bin/libBulletDynamics_gmake_x64_release.a" />
+			<Add library="../../libraries/bullet3-2.85.1/bin/libBulletCollision_gmake_x64_release.a" />
+			<Add library="../../libraries/bullet3-2.85.1/bin/libLinearMath_gmake_x64_release.a" />
+			<Add directory="/home/joel/Documentos/libraries/irrlicht-1.8.4/lib/" />
+		</Linker>
+		<Unit filename="common.h" />
+		<Unit filename="enumerations.h" />
+		<Unit filename="font_manager.cpp" />
+		<Unit filename="font_manager.h" />
+		<Unit filename="game_board.cpp" />
+		<Unit filename="game_dragging.cpp" />
+		<Unit filename="game_events.cpp" />
+		<Unit filename="game_number_charts.cpp" />
+		<Unit filename="game_totaledrum.cpp" />
+		<Unit filename="game_utils.cpp" />
+		<Unit filename="gui_freetype_font.cpp" />
+		<Unit filename="gui_freetype_font.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mbIrrklang.cpp" />
+		<Unit filename="mbIrrklang.h" />
+		<Unit filename="mbOpenSLES.cpp" />
+		<Unit filename="mbOpenSLES.h" />
+		<Unit filename="mbSound.cpp" />
+		<Unit filename="mbSound.h" />
+		<Unit filename="menu_events.cpp" />
+		<Unit filename="physics.cpp" />
+		<Unit filename="physics.h" />
+		<Unit filename="playton_game.cpp" />
+		<Unit filename="playton_game.h" />
+		<Unit filename="playton_menu.cpp" />
+		<Unit filename="playton_menu.h" />
+		<Unit filename="playton_translation.cpp" />
+		<Unit filename="playton_translation.h" />
+		<Unit filename="playton_utility.cpp" />
+		<Unit filename="playton_utility.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
